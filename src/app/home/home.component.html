@@ -1,0 +1,21 @@
+<header>Teste</header>
+
+<table class="table table-striped table-bordered">
+  <thead>
+    <tr class="d-flex">
+      <th class="col-3">Item</th>
+      <th class="col-3">Description</th>
+      <th class="col-3">Price</th>
+      <th class="col-3">.</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let item of getItems(); let i = index" class="d-flex">
+      <td class="col-3">{{ i + 1 }}</td>
+      <td class="col-3">{{ item.description }}</td>
+      <td class="col-3">{{ item.price }}</td>
+      <td class="col-3"><figure><img class="product_item" src="{{ item.img }}"/></figure></td>
+
+    </tr>
+  </tbody>
+</table>
